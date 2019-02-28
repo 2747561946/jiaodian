@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<!-- <textarea id="showStr"></textarea> -->
+
+<div id="showStr"></div>
+<div style="display:none" id="string">请在此输入您想咨询的问题
+</div>
+
+<script language="javascript">
+var index=0;
+var str=document.getElementById("string").innerHTML;
+function type(){
+if(index==str.length){index=0;}
+    document.getElementById("showStr").innerText = str.substring(0,index++);
+}
+setInterval(type, 500);
+</script>
+
+
+</body>
+</html>
